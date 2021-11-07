@@ -1,0 +1,311 @@
+@font-face {
+    font-family: 'MyFont';
+    src: local('futura'), url(./fonts/futur.ttf) format('ttf');
+}
+:root{
+    --test: red;
+    --test2:green;
+    --light: #fff;
+    --mainColor: #1acbaa;
+    --mainColorHover: #27c0a4;
+    --mainTextColor: #002678;
+    --bgimage: url(./images/bg.jpeg);
+}
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    margin: 0;
+    font-family: 'futura';
+    min-height:100vh;
+    color: rgb(51, 51, 51);;
+}
+
+header{
+    height: 100px;
+    position: absolute;
+    background: transparent;
+    width: 100%;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding:  0px 150px;
+}
+header .logo{
+    width: 30%;
+}
+
+header .logo p a{
+    text-decoration: none;
+    margin: 0;
+    font-size: 25px;
+    color: var(--light);
+}
+
+header ul{
+    width: 70%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+}
+
+header ul li{
+    display: inline-block;
+    margin: 0px 0px 0px 30px;
+}
+
+header ul li a{
+    text-decoration: none;
+    padding: 10px 10px;
+    color: var(--light);
+}
+
+.hero{
+    position: relative;
+    background: var(--bgimage);
+    background-position: 50%;
+    background-attachment: fixed;
+    width: 100%;
+
+    min-height: 100vh;
+    margin: 0;
+    padding: 0px 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero .layer{
+    background: #00000080;
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.hero .content{
+    z-index: 2;
+    width: 50%;
+}
+.hero h1{
+    margin: 0px 0px 50px 0px;
+    font-size: 50px;
+    color: var(--light);
+    border-left: 6px solid var(--mainColor);
+    padding-left: 15px;
+}
+.hero p{
+    font-size: 20px;
+    color: #ccc;
+    margin-bottom: 50px;
+}
+.hero form{
+    width: 100%;
+    max-width: 500px;
+    background: var(--light);
+    padding: 5px 5px 5px 15px;
+    border-radius: 50px;
+}
+.hero form label input{
+    width: calc(70% - 20px);
+    padding: 5px;
+    margin-right: 20px;
+    outline: none;
+    border: none;
+    font-size: 18px;
+    color: rgb(51, 51, 51);
+    font-family: 'futura';
+}
+.hero form button{
+    display: inline-block;
+    background: var(--mainColor);
+    outline: none;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 18px;
+    min-width: 30%;
+    cursor: pointer;
+    font-size: 16px;
+    color: var(--light);
+    font-family: 'futura';
+    transition: all 0.3s;
+}
+.hero form button:hover{
+    background: var(--mainColorHover);
+}
+
+.books-list{
+    padding: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:auto;
+    column-gap: 35px ;
+    row-gap: 35px;
+    justify-items: stretch;
+    align-items: stretch;
+}
+
+.book-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    box-shadow: 1px 1px 8px 2px #00000040;
+    border-radius: 4px;
+}
+
+.book-card img{
+    max-width: 100%;
+    height: auto;
+}
+
+.book-card h3{
+    color: rgb(51, 51, 51);
+    font-size: 16px;
+    text-align: left;
+}
+
+.book-card a{
+    text-decoration: none;
+    margin-top: 10px;
+    color: var(--light);
+    padding: 10px 30px;
+    background: var(--mainColor);
+    border-radius: 50px;
+    box-shadow: 1px 1px 6px 2px #00000020;
+}
+
+.book-card a:hover{
+    background: var(--mainColorHover);
+}
+
+.single-book{
+    display: flex;
+    flex-direction: column;
+}
+
+.single-header{
+    min-height: 300px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.single-header img{
+    position: absolute;
+    z-index: 1;
+    top:0;
+    left:0;
+    min-width: 100%;
+    height: auto;
+}
+
+.single-header .layer{
+    z-index: 2;
+    background: #00000080;
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.single-header h1{
+    color: white;
+    z-index: 5;
+    font-size: 50px;
+}
+
+.single-book .content{
+    display: flex;
+    flex-direction: row;
+    margin: 150px 0px;
+    padding: 0px 150px;
+}
+
+.single-book .content .thumbnail{
+    min-width: 30%;
+}
+
+.single-book .content .thumbnail img{
+    width: 100%;
+}
+
+.book-info{
+    width: 70%;
+    padding: 0px 0px 0px 100px;
+}
+
+.book-info h2{
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+.book-info .meta{
+    font-size: 14px;
+    margin: 0px 20px 20px 0px;
+    display: inline-block;
+}
+
+.book-info .meta span{
+    font-style: italic;
+}
+
+.book-info .description{
+    line-height: 1.8;
+    margin-top: 40px;
+    border-left: 4px solid rgb(51, 51, 51);
+    padding: 10px 0px;
+    padding-left: 15px;
+}
+
+.buy-info{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.book-info .price{
+    font-size: 35px;
+    color: var(--mainColor);
+    margin: 5px 100px 5px 0px;
+}
+
+.book-info .price span{
+    font-size: 20px;
+}
+
+.book-info a{
+    font-size: 25px;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: var(--light);
+    background: var(--mainColor);
+    border-radius: 50px;
+    display: block;
+}
+
+footer{
+    background: #000;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p{
+    color: var(--light);
+    margin: 0;
+}
