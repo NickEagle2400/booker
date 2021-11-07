@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import {useDispatch} from 'react-redux'
 import {getBookDetails} from '../actions'
+import Thumbnail from './thumbnail'
 
 function BookCard(props) {
 
@@ -15,7 +16,7 @@ function BookCard(props) {
 
     return(
         <div className="book-card">
-            <img src={imageUrl} alt={title}/>
+            <Thumbnail thumbnail={imageUrl} alt={title} />
             <h3>{title}</h3>
             <Link to={`/${idCode}`} onClick={handleClick}>See more details</Link>
         </div>

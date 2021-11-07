@@ -11,7 +11,7 @@ function Header(){
             <ul>
                 <li><Link to="/">Home</Link></li>
                 <li><Link to="/single">SingleBook</Link></li>
-                <li><Link to="https://www.github.com">See the Docs</Link></li>
+                <li><a href="https://github.com/NickEagle2400/booker" target="_blank" rel="noreferrer">See the Docs</a></li>
             </ul>
         </header>
     )
