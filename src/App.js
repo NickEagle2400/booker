@@ -4,10 +4,12 @@ import SingleBook from "./pages/singleBook.js"
 import Header from "./components/header"
 import Footer from "./components/footer"
 import PageNotFound from './pages/404';
+import ScrollToTop from "./components/scrollToTop";
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Header />
 
         <Switch>
