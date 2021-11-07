@@ -7,7 +7,7 @@ export function getBooksData(searchTerm) {
     return function(dispatch) {
         return axios.get(baseUrl + '?q=' + searchTerm + '&maxResults=15&orderBy=relevance&key=' + api )
             .then(({ data }) => {
-            localStorage.removeItem('bookList');
+            sessionStorage.removeItem('bookList');
             dispatch(setBooksData(data));
         });
     };
@@ -25,7 +25,7 @@ export const getBookDetails = (bookId) => {
         return axios.get(baseUrl + '/' + bookId + '?key=' + api )
             .then(({ data }) => {
                 console.log(data)
-                localStorage.removeItem('bookDetails');
+                sessionStorage.removeItem('bookDetails')
                 dispatch(setBookDetails(data));
         });
     };

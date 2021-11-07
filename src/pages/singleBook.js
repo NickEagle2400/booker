@@ -4,7 +4,7 @@ import {useSelector} from 'react-redux'
 function SingleBook() {
     
     const bookDet = useSelector(state => state.bookDetailsReducer)
-    const localData = JSON.parse(localStorage.getItem('bookDetails'))
+    const localData = JSON.parse(sessionStorage.getItem('bookDetails'))
 
     if(bookDet.item === undefined && localData === null){
         return <div className="loader">Loading . ..</div>
@@ -17,7 +17,7 @@ function SingleBook() {
         else{
             book = localData
         }
-        localStorage.setItem('bookDetails', JSON.stringify(book))
+        sessionStorage.setItem('bookDetails', JSON.stringify(book))
 
         let buyBtn;
         if(book.item.saleInfo.buyLink){
