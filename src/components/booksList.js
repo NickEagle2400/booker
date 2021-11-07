@@ -4,14 +4,24 @@ import {useSelector} from 'react-redux'
 
 function BooksList(){
 
-    const bookInfo = useSelector(state => state.bookListReducer)
-    console.log(bookInfo.item?.items[1])
-    if(bookInfo.item === undefined)
+    const bookList = useSelector(state => state.bookListReducer)
+    const localList = JSON.parse(localStorage.getItem('bookList'))
+
+    if(bookList.item === undefined && localList === null)
         return <></>
-    else
+    else{
+        let list
+        if(localList === null){
+            list = bookList
+            localStorage.setItem('bookList', JSON.stringify(bookList))
+        }
+        else{
+            list = localList
+        }
+        console.log("ciao")
         return(
             <div className="books-list">
-                {bookInfo.item?.items.map((book, index) => {
+                {list.item?.items.map((book, index) => {
                     return(
                         <BookCard 
                             key={index} 
@@ -24,6 +34,7 @@ function BooksList(){
                 }
             </div>
         )
+    }
 }
 
 export default BooksList

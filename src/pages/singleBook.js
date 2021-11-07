@@ -2,13 +2,23 @@ import React from 'react'
 import {useSelector} from 'react-redux'
 
 function SingleBook() {
+    
+    const bookDet = useSelector(state => state.bookDetailsReducer)
+    const localData = JSON.parse(localStorage.getItem('bookDetails'))
 
-    const book = useSelector(state => state.bookDetailsReducer)
-
-    if(book.item === undefined){
-        return <></>
+    if(bookDet.item === undefined && localData === null){
+        return <div className="loader">Loading . ..</div>
     }
-    else{
+    else {
+        let book
+        if(localData === null){
+            book = bookDet
+        }
+        else{
+            book = localData
+        }
+        localStorage.setItem('bookDetails', JSON.stringify(book))
+
         let buyBtn;
         if(book.item.saleInfo.buyLink){
             buyBtn = <a href={book.item.saleInfo.buyLink} target="_blank" rel="noreferrer">Buy Now</a>
@@ -16,6 +26,9 @@ function SingleBook() {
         else{
             buyBtn = <></>
         }
+        // localStorage.setItem('bookDetails', JSON.stringify(book));
+        // console.log(JSON.parse(localStorage.getItem('bookDetails')))
+
         return(
             <div className="single-book">
                 <div className="single-header">
