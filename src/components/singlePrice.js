@@ -1,4 +1,5 @@
 import React from 'react'
+import BuyButton from './buyButton'
 
 function SinglePrice(props){
 
@@ -7,7 +8,7 @@ function SinglePrice(props){
     return(
         <div className="buy-info">
             <p className="price">{amount} <span>{currencyCode}</span></p>
-            <a href={buyLink} target="_blank" rel="noreferrer">Buy Now</a>
+            <BuyButton buyLink={buyLink}/>
         </div>
     )
 }
