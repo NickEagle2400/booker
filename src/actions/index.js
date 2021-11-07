@@ -21,10 +21,8 @@ function setBooksData(data){
 
 export const getBookDetails = (bookId) => {
     return function(dispatch) {
-        console.log(bookId)
         return axios.get(baseUrl + '/' + bookId + '?key=' + api )
             .then(({ data }) => {
-                console.log(data)
                 sessionStorage.removeItem('bookDetails')
                 dispatch(setBookDetails(data));
         });

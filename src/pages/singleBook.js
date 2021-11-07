@@ -12,7 +12,7 @@ function SingleBook() {
     const localData = JSON.parse(sessionStorage.getItem('bookDetails'))
 
     if(bookDet.item === undefined && localData === null){
-        return <div className="loader">Loading . ..</div>
+        return <div className="loader">Loading . . .</div>
     }
     else {
         let book
