@@ -3,7 +3,6 @@ import Home from "./pages/home"
 import SingleBook from "./pages/singleBook.js"
 import Header from "./components/header"
 import Footer from "./components/footer"
-import PageNotFound from './pages/404';
 import ScrollToTop from "./components/scrollToTop";
 
 function App() {
@@ -21,12 +20,6 @@ function App() {
           <Route path="/:id">
             <SingleBook />
           </Route>
-
-          <Route exact path="/404">
-            <PageNotFound />
-          </Route>
-
-          <Redirect to="/404" />
 
         </Switch>
 
