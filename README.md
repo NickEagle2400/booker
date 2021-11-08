@@ -61,7 +61,7 @@ GitHub CLI
 ```
 <br>
 
-3. Create a .env file and enter your API KEY
+3. Rename .env.example to .env file and enter your API KEY
 
 ```js
   REACT_APP_BOOK_API_KEY = YourAPIKey; \/\/insert here your api key
@@ -71,10 +71,10 @@ GitHub CLI
 ## Dependencies
 [dotenv-webpack](https://www.npmjs.com/package/dotenv-webpack): ^7.0.3<br>
 [axios](https://axios-http.com/docs/intro): ^0.23.0<br>
-[react-router-dom](https://v5.reactrouter.com/web/guides/quick-start): ^5.3.0
-[redux](https://redux.js.org/): ^4.1.2
-[redux-thunk](https://github.com/reduxjs/redux-thunk): ^2.4.0
-[react-redux](https://react-redux.js.org/): ^7.2.6
+[react-router-dom](https://v5.reactrouter.com/web/guides/quick-start): ^5.3.0<br>
+[redux](https://redux.js.org/): ^4.1.2<br>
+[redux-thunk](https://github.com/reduxjs/redux-thunk): ^2.4.0<br>
+[react-redux](https://react-redux.js.org/): ^7.2.6<br>
 
 
 
