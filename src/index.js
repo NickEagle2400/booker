@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 
 import './style.css'
 
-const store = compose(applyMiddleware(thunk), window.devToolsExtension && window.devToolsExtension(),)(createStore)(allReducers);
+const store = compose(applyMiddleware(thunk), window.__REDUX_DEVTOOLS_EXTENSION__ && window.devToolsExtension?.(),)(createStore)(allReducers);
 
 ReactDOM.render(
   <Provider store={store}>
