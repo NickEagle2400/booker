@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseUrl = process.env.REACT_APP_BOOK_BASE_URL
+const baseUrl = 'https://www.googleapis.com/books/v1/volumes'
 const api = process.env.REACT_APP_BOOK_API_KEY
 
 export function getBooksData(searchTerm) {
