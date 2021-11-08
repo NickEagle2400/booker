@@ -1,70 +1,93 @@
-# Getting Started with Create React App
+# Booker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br />
+<div align="center">
+  <a href="https://nicolasricardi.com">
+    <img src="https://nicolasricardi.com/assets/images/logo.png" alt="Logo Nicolas Ricardi" width="80" height="80">
+  </a>
 
-## Available Scripts
+  <h3 align="center">Nicolas Ricardi - React.js Project</h3>
+</div>
 
-In the project directory, you can run:
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#about-the-project">About The Project</a>
+      <ul>
+        <li><a href="#built-with">Built With</a></li>
+      </ul>
+    </li>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#dependencies">Dependencies</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ol>
+</details>
 
-### `npm start`
+## About The Project
+Booker is the project of Start2Impact's React guide.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This application allows you to search for a book and view data relating to books that contain the string searched by the user.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[![Booker Screenshot](https://www.nicolasricardi.com/assets/images/booker.png)](https://zen-heyrovsky-376629.netlify.app/)
 
-### `npm test`
+### Built With
+This project is built with react.js and deployed on Netlify.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Getting Started
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. First of all you need to download the package or clone the repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+HTTPS
+```sh
+  https://github.com/NickEagle2400/booker.git
+```
+SSH
+```sh
+  git@github.com:NickEagle2400/booker.git
+```
+GitHub CLI
+```sh
+  gh repo clone NickEagle2400/booker
+```
+<br>
 
-### `npm run eject`
+2. Install all dependencies
+```sh
+  npm install
+```
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+3. Create a .env file and enter your API KEY
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```js
+  REACT_APP_BOOK_API_KEY = YourAPIKey; \/\/insert here your api key
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Dependencies
+[dotenv-webpack](https://www.npmjs.com/package/dotenv-webpack): ^7.0.3<br>
+[axios](https://axios-http.com/docs/intro): ^0.23.0<br>
+[react-router-dom](https://v5.reactrouter.com/web/guides/quick-start): ^5.3.0
+[redux](https://redux.js.org/): ^4.1.2
+[redux-thunk](https://github.com/reduxjs/redux-thunk): ^2.4.0
+[react-redux](https://react-redux.js.org/): ^7.2.6
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
+Main use case:
+1. Search books in the input field.
+2. Click on "see more details"
 
-### Code Splitting
+Try app [Here](https://zen-heyrovsky-376629.netlify.app/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Contact
 
-### Analyzing the Bundle Size
+Author: [Nicolas Ricardi](www.nicolasricardi.com) <br />
+Email: [info@nicolasricardi.com](mailto:info@nicolasricardi.com)<br />
+[LinkedIn](https://www.linkedin.com/in/nicolasricardi/) - [Twitter](https://twitter.com/nick_ricardi00) - [GitHub](https://github.com/NickEagle2400)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
