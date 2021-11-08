@@ -69,8 +69,8 @@ GitHub CLI
 
 
 ## Dependencies
-[dotenv-webpack](https://www.npmjs.com/package/dotenv-webpack): ^7.0.3<br>
-[axios](https://axios-http.com/docs/intro): ^0.23.0<br>
+[dotenv](https://www.npmjs.com/package/dotenv): ^8.2.0<br>
+[axios](https://axios-http.com/docs/intro): ^0.24.0<br>
 [react-router-dom](https://v5.reactrouter.com/web/guides/quick-start): ^5.3.0<br>
 [redux](https://redux.js.org/): ^4.1.2<br>
 [redux-thunk](https://github.com/reduxjs/redux-thunk): ^2.4.0<br>
