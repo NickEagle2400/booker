@@ -73,7 +73,6 @@ header ul li a{
     background-position: 50%;
     background-attachment: fixed;
     width: 100%;
-
     min-height: 100vh;
     margin: 0;
     padding: 0px 150px;
@@ -312,6 +311,7 @@ footer{
 footer p{
     color: var(--light);
     margin: 0;
+    padding: 0px 20px
 }
 
 @media screen and (max-width:767px) {
@@ -340,7 +340,7 @@ footer p{
 
     .hero{
         background-position: 60% 100%;
-        min-height: 100vh;
+        height: 100vh;
         padding: 0px 20px;
     }
     
